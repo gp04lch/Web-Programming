@@ -16,8 +16,7 @@ const io = require("socket.io")(server);
 
 io.on('connection', (socket) => {
 	console.log('New user connected')
-  var address = socket.request.connection.remoteAddress;
-  console.log(address);
+
 
 	//default username
 	socket.username = "Anonymous";
