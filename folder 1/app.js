@@ -1,12 +1,19 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
-app.use(express.static('public'))
+//middlwares
+app.use(express.static('public'));
 
-app.get('/', (req,res)=>{
-  res.send("something la")
-})
+app.get('/', function(req, res){
+    res.sendFile(__dirname + '/views/index.html');
+});
 
-server = app.listen(3000)
+server = app.listen(3000);
+
+const io = require("socket.io")(server);
+
+io.on('connection', (socket)=>{
+  console.log('new user connected');
+});
