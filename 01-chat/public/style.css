@@ -19,12 +19,8 @@ body {
     height: 100%;
 }
 
-header {
-    text-align: center;
-}
-
 h1 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: sans-serif;
     margin: 0px;
 }
 
