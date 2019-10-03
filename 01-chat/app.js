@@ -14,6 +14,11 @@ server = app.listen(3000);
 
 const io = require("socket.io")(server);
 
+//testing nem shit
+var nem = require("nem-sdk").default;
+var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
+console.log(endpoint);
+
 io.on('connection', (socket) => {
 	console.log('New user connected')
 
