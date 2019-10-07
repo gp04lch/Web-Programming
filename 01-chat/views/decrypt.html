@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Decryption</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  </head>
+  <body>
+    <section>
+      <div id="keys">
+        <input id="private_key" type="text" />
+        <button id="set_private_key" type="button">Set Private Key</button>
+        <input id="public_key" type="text" />
+        <button id="set_private_key" type="button">Set Receiver's Private Key</button>
+      </div>
+    </section>
+
+    <section id="input_zone">
+      <input id="message" class="vertical-align" type="text" />
+      <button id="decrypt_message" class="vertical-align" type="button">Decrypt</button>
+      <input id="encrypted_message" class="vertical-align" type="text" />
+    </section>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="decrypt.js"></script>
+
+  </body>
+
+
+</html>

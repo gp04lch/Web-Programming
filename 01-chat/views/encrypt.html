@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Encryption</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <div id="keys">
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Private Key (Your Own)</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="private_key">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Public Key (Receiver's)</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="public_key">
+          </div>
+        </div>
+      </section>
+
+      <section id="input_zone">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Message to Encrypt</span>
+          </div>
+          <textarea class="form-control" aria-label="With textarea" id="message"></textarea>
+        </div>
+        <button id="encrypt_message" type="button" class="btn btn-primary">Encrypt Message</button>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Encrypted Message</span>
+          </div>
+          <textarea class="form-control" aria-label="With textarea" id="encrypted_message"></textarea>
+        </div>
+
+      </section>
+
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="encrypt.js"></script>
+    </div>
+  </body>
+</html>
